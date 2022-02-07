@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactame</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li><a href="../Index.html">Tim-Berners-Lee</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Precios.html">Precios</a></li>
+            <li><a href="Contactame.html">Contactame</a></li>
+        </ul>
+    
+        <img src="../Imagenes/imagen-menu.png" usemap="#zonas"/>
+    
+        <map name="zonas">
+            <area shape="rect" coords="15,44,107,132" href="../Index.html">
+            <area shape="circle" coords="173,89,47" href="../html/Portfolio.html">
+            <area shape="poly" coords="288,42,344,135,231,135" href="../html/Precios.html">
+            <area shape="rect" coords="351,32,438,,140" href="../html/Contactame.html">
+        </map>
+    </div>
+    
+    <div id="main-content">
+
+        <h1>Contactame</h1>
+
+        <h2>Formulario de contacto</h2>
+
+        <form name="contactame" method="post" action="/send.php" enctype="multipart/form-data">
+            <fieldset>
+            <legend>Datos personales</legend>
+                <div>
+                    Nombre:
+                    <input type="text" name="nombre" autocomplete="off" size="40"
+                    placeholder="Introduce tu nombre" minlength="1" maxlength="100"
+                    required pattern="[A-Za-Z0-9]"/>
+                </div>
+
+                <div>
+                    Apellidos:
+                    <input type="text" name="Apellidos" autocomplete="off" size="40"
+                    placeholder="Introduce tus apellidos" minlength="1" maxlength="100"
+                    required pattern="[A-Za-Z0-9]"/>
+                </div>
+
+                <div>
+                    Email:
+                    <input type="email" name="email"/>
+                </div>
+
+                <div>
+                    Fecha de nacimiento:
+                    <input type="date" name="fecha"/>
+                </div>
+
+                <div>
+                    Edad:
+                    <input type="number" name="edad"/>
+                </div>
+
+                <div>
+                    Sexo:
+                    <label><input type="radio" name="sexo" value="H" checked/>Hombre</label>
+                    <label><input type="radio" name="sexo" value="M"/>Mujer</label> 
+                </div>
+
+                <div>
+                    Pais:
+                    <select name="pais">
+                        <option value="Elegir" id="pais">Elegir opción</option>
+                        <option value="España" id="pais">España</option>
+                        <option value="Francia" id="pais">Francia</option>
+                        <option value="Portugal" id="pais">Portugal</option>
+                        <option value="Italia" id="pais">Italia</option>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros datos</legend>  
+                    
+                    <div>
+                        Mensaje:
+                        <textarea spellcheck="true" cols="50" rows="15" placeholder="Introduce tu mensaje"></textarea>
+                    </div>
+
+                    <div>
+                        Adjunta una foto
+                        <input type="file" accept="jpg">
+                    </div>
+            </fieldset>
+
+                <div>
+                    He leido las condiciones
+                    <input type="checkbox" name="condiciones" required checked>
+                </div>
+
+                <div>
+                    <input type="reset" name="Reiniciar">
+                    <input type="submit" name="Enviar">
+                </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!--Daniel Lynch Barreto-->
